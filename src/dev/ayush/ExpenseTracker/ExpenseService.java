@@ -34,8 +34,8 @@ public class ExpenseService {
     public boolean deleteExpense(User user, int expenseId) {
         List<Expense> expenses = user.getExpenses();
 
-        for (Expense expens : expenses) {
-            if (expens.getId() == expenseId) expenses.remove(expens);
+        for (Expense expense : expenses) {
+            if (expense.getId() == expenseId) expenses.remove(expense);
             return true;
         }
 
