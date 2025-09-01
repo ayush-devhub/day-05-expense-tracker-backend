@@ -15,6 +15,10 @@ public class UserService {
         users = new ArrayList<>();
     }
 
+    public List<User> getUsers() {
+        return users;
+    }
+
     /**
      * Add user with validation.
      */
