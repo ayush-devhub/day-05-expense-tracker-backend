@@ -1,0 +1,4 @@
+USER,101,ayush,fjkahf
+EXPENSE2,clothing,1000.0,shopping,2025-09-01
+USER,102,prakhar,kfasjbf
+EXPENSE1,food,242.0,food,2025-09-01

@@ -18,7 +18,7 @@ public class FileService {
                 writer.write("USER," + user.getId() + "," + user.getName() + "," + user.getEmail());
                 writer.newLine();
                 for (Expense expense : user.getExpenses()) {
-                    writer.write("EXPENSE" + expense.getId() + "," + expense.getCategory() + "," + expense.getAmount() + "," + expense.getDescription() + "," + expense.getDate());
+                    writer.write("EXPENSE" + "," + expense.getId() + "," + expense.getCategory() + "," + expense.getAmount() + "," + expense.getDescription() + "," + expense.getDate());
                     writer.newLine();
                 }
             }

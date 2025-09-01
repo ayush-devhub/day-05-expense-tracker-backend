@@ -66,7 +66,7 @@ public class ExpenseService {
         List<Expense> expenses = user.getExpenses();
 
         for (Expense expens : expenses) {
-            if (expens.getCategory() == category) {
+            if (expens.getCategory().equalsIgnoreCase(category)) {
                 totalInCategory += expens.getAmount();
             }
         }

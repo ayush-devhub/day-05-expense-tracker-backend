@@ -54,7 +54,7 @@ public class ExpenseTrackerApp {
                 int id = validInt("Enter User ID: ", 1, 1000, scanner);
                 int expenseId = validInt("Enter Expense ID: ", 1, 1000, scanner);
                 String category = validString("Enter Category: ", scanner);
-                double amount = validDouble("Enter Expense ID: ", 1, 100000, scanner);
+                double amount = validDouble("Enter Amount: ", 1, 100000, scanner);
                 String description = validString("Enter Description: ", scanner);
                 expenseService.addExpenseToUser(userService.findUserById(id), new Expense(expenseId, category, amount, LocalDate.now(), description));
                 System.out.println("Expense added successfully!");
@@ -64,6 +64,7 @@ public class ExpenseTrackerApp {
             case 3: {
                 List<User> userList = userService.getUsers();
                 for (User user : userList) {
+                    System.out.println("Expenses for User " + user.getId());
                     expenseService.listExpensesByUser(user);
                 }
                 break;
@@ -91,7 +92,7 @@ public class ExpenseTrackerApp {
                 User user = userService.findUserById(id);
                 String category = validString("Enter Category: ", scanner);
                 double totalSpent = expenseService.totalByCategory(user, category);
-                System.out.println("Total spent: " + totalSpent + "in category: " + category);
+                System.out.println("Total spent: " + totalSpent + " in category: " + category);
                 break;
             }
 
